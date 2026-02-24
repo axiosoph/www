@@ -1,0 +1,12 @@
+[build]
+command = "curl -sSfL https://sukr.io/release/x86_64-linux/sukr -o /tmp/sukr && chmod +x /tmp/sukr && /tmp/sukr"
+publish = "public"
+
+[[headers]]
+for = "/*"
+[headers.values]
+  Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'sha256-DPkx90n/yY2RdFrA6pyLryiSIgPSeIOdNTpq2tWcR6A='; frame-ancestors 'none'"
+  X-Content-Type-Options = "nosniff"
+  X-Frame-Options = "DENY"
+  Referrer-Policy = "strict-origin-when-cross-origin"
+  Permissions-Policy = "camera=(), microphone=(), geolocation=()"
