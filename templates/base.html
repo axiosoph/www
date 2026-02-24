@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />{% endif %}
+  <title>{% block title %}{{ title }} — {{ config.title }}{% endblock title %}</title>
+  <link rel="canonical" href="{{ config.base_url }}{{ page_path }}" />
+  <link rel="stylesheet" href="{{ prefix }}/style.css" />
+  <link rel="icon" type="image/svg+xml" href="{{ prefix }}/axiowl-logo.svg" />
+</head>
+
+<body>
+  {% block content %}{% endblock content %}
+  <script>
+    document.documentElement.classList.add('js');
+    var o = new IntersectionObserver(function (e) {
+      if (e[0].isIntersecting) { e[0].target.classList.add('in-view'); o.disconnect(); }
+    });
+    var a = document.querySelector('.action');
+    if (a) o.observe(a);
+  </script>
+</body>
+
+</html>
