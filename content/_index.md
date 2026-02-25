@@ -56,6 +56,6 @@ Current R&D informing our practice:
   and zero-trust derivation hierarchies
 
 <div class="action">
-<div class="line"><span class="prompt">$</span><span class="command">curl -sO <a href="./axiosoph.asc">https://axioso.ph/axiosoph.asc</a></span></div>
-<div class="line"><span class="prompt">$</span><span class="command-2">echo "Describe your problem." | <a href="mailto:consult@axioso.ph">mail consult@axioso.ph</a></span></div>
+<div class="line"><span class="prompt">❯</span><span class="command"><span class="cmd-name-1">curl</span> <span class="cmd-flag">-s</span> <a href="./axiosoph.asc"><span class="cmd-url">https://axioso.ph/axiosoph.asc</span></a> <span class="cmd-op">|</span> <span class="cmd-name-2">gpg</span> <span class="cmd-flag">--import</span></span></div>
+<div class="line"><span class="prompt">❯</span><span class="command-2"><span class="cmd-name-3">echo</span> <span class="cmd-string">"Describe your problem."</span> <span class="cmd-op">|</span> <a href="mailto:consult@axioso.ph"><span class="cmd-name-4">mail</span> <span class="cmd-url">consult@axioso.ph</span></a></span></div>
 </div>

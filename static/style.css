@@ -238,24 +238,24 @@ a:hover {
 }
 
 .action .prompt {
-  color: var(--fg-muted);
+  color: var(--hl-magenta);
   user-select: none;
   flex-shrink: 0;
 }
 
 .action .line:last-child .prompt {
   opacity: 0;
-  animation: prompt-appear 0.001s 3.2s forwards;
+  animation: prompt-appear 0.001s 5s forwards;
 }
 
 .action .command {
   max-width: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--fg);
+  color: var(--hl-fg);
   border-right: 0.55em solid var(--fg-muted);
   animation:
-    typing-1 1.2s steps(40) 1.5s forwards,
+    typing-1 3.2s steps(53) 1.5s forwards,
     cursor-blink 0.8s step-end 4 forwards;
 }
 
@@ -263,21 +263,61 @@ a:hover {
   max-width: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--fg);
+  color: var(--hl-fg);
   border-right: 0.55em solid transparent;
   animation:
-    typing-2 2s steps(54) 3.5s forwards,
-    cursor-enter 0.8s step-end 3.2s infinite;
+    typing-2 3.2s steps(54) 5.3s forwards,
+    cursor-enter 0.8s step-end 5s infinite;
+}
+
+/* ── Terminal Token Colors (snazzy) ──────────────────────── */
+.action .cmd-name-1,
+.action .cmd-name-2,
+.action .cmd-name-3,
+.action .cmd-name-4 {
+  color: var(--hl-red);
+}
+
+.action .cmd-name-1 {
+  animation: cmd-resolve 0.001s 1.74s forwards;
+}
+
+.action .cmd-name-2 {
+  animation: cmd-resolve 0.001s 4.16s forwards;
+}
+
+.action .cmd-name-3 {
+  animation: cmd-resolve 0.001s 5.54s forwards;
+}
+
+.action .cmd-name-4 {
+  animation: cmd-resolve 0.001s 7.43s forwards;
+}
+
+.action .cmd-flag {
+  color: var(--hl-fg);
+}
+
+.action .cmd-url {
+  color: var(--hl-blue);
+}
+
+.action .cmd-string {
+  color: var(--hl-yellow);
+}
+
+.action .cmd-op {
+  color: var(--hl-coral);
 }
 
 .action a {
-  color: var(--fg);
-  border-bottom: 1px solid var(--accent);
+  color: inherit;
+  border-bottom: 1px solid var(--fg-muted);
 }
 
 .action a:hover {
   color: var(--accent);
-  border-bottom-color: var(--fg);
+  border-bottom-color: var(--accent);
 }
 
 /* ── Typing Animation ────────────────────────────────────── */
@@ -287,7 +327,7 @@ a:hover {
   }
 
   to {
-    max-width: 41ch;
+    max-width: 54ch;
   }
 }
 
@@ -325,6 +365,12 @@ a:hover {
   }
 }
 
+@keyframes cmd-resolve {
+  to {
+    color: var(--hl-green);
+  }
+}
+
 /* JS-enhanced: wait for IntersectionObserver instead of delay */
 .js .action .command {
   animation-play-state: paused, paused;
@@ -334,17 +380,41 @@ a:hover {
 
 .js .action .line:last-child .prompt {
   animation-play-state: paused;
-  animation-delay: 2.4s;
+  animation-delay: 4s;
 }
 
 .js .action .command-2 {
   animation-play-state: paused, paused;
-  animation-delay: 2.9s, 2.4s;
+  animation-delay: 4.3s, 4s;
+}
+
+.js .action .cmd-name-1 {
+  animation-play-state: paused;
+  animation-delay: 0.74s;
+}
+
+.js .action .cmd-name-2 {
+  animation-play-state: paused;
+  animation-delay: 3.16s;
+}
+
+.js .action .cmd-name-3 {
+  animation-play-state: paused;
+  animation-delay: 4.54s;
+}
+
+.js .action .cmd-name-4 {
+  animation-play-state: paused;
+  animation-delay: 6.43s;
 }
 
 .js .action.in-view .command,
 .js .action.in-view .command-2,
-.js .action.in-view .line:last-child .prompt {
+.js .action.in-view .line:last-child .prompt,
+.js .action.in-view .cmd-name-1,
+.js .action.in-view .cmd-name-2,
+.js .action.in-view .cmd-name-3,
+.js .action.in-view .cmd-name-4 {
   animation-play-state: running, running;
 }
 
