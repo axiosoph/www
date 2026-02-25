@@ -1,12 +1,6 @@
 {% extends "base.html" %} {% block title %}{{ config.title }}{% endblock title %} {% block content %}
 <main>
-    <header class="site-header">
-        <div class="site-title">
-            <img src="{{ prefix }}/axiowl-logo.svg" alt="" class="logo" />
-            <h1>Axiosophic Systems</h1>
-        </div>
-        <p class="tagline">{{ page.description }}</p>
-    </header>
+    <p class="tagline">{{ page.description }}</p>
     <article>
         <section class="content">{{ content | safe }}</section>
     </article>

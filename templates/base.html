@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {% if page.description %}
   <meta name="description" content="{{ page.description }}" />{% endif %}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ title }}" />
+  {% if page.description %}
+  <meta property="og:description" content="{{ page.description }}" />{% endif %}
+  <meta property="og:url" content="{{ config.base_url }}{{ page_path }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ title }}" />
+  {% if page.description %}
+  <meta name="twitter:description" content="{{ page.description }}" />{% endif %}
   <title>{% block title %}{{ title }} — {{ config.title }}{% endblock title %}</title>
   <link rel="canonical" href="{{ config.base_url }}{{ page_path }}" />
   <link rel="stylesheet" href="{{ prefix }}/style.css" />
@@ -13,7 +22,16 @@
 </head>
 
 <body>
+  <header class="site-header">
+    <a href="{{ prefix }}/index.html" class="site-title">
+      <img src="{{ prefix }}/axiowl-logo.svg" alt="" class="logo" />
+      <span>Axiosophic Systems</span>
+    </a>
+  </header>
   {% block content %}{% endblock content %}
+  <footer class="site-footer">
+    <p>&copy; 2026 Axiosophic Systems</p>
+  </footer>
   <script>
     document.documentElement.classList.add('js');
     var o = new IntersectionObserver(function (e) {

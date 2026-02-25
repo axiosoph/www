@@ -1,6 +1,6 @@
 +++
 title = "Axiosophic Systems"
-description = "Distributed systems architecture and protocol engineering for organizations that refuse to compromise."
+description = "Distributed systems. Protocol engineering. Zero compromises."
 template = "homepage.html"
 +++
 
@@ -54,6 +54,6 @@ Current R&D informing our practice:
   and zero-trust derivation hierarchies
 
 <div class="action">
-<p class="prompt">$</p>
-<p class="command">echo "Describe your problem." | <a href="mailto:consulting@axioso.ph">mail consulting@axioso.ph</a></p>
+<div class="line"><span class="prompt">$</span><span class="command">curl -sO <a href="./axiosoph.asc">https://axioso.ph/axiosoph.asc</a></span></div>
+<div class="line"><span class="prompt">$</span><span class="command-2">echo "Describe your problem." | <a href="mailto:consult@axioso.ph">mail consult@axioso.ph</a></span></div>
 </div>
