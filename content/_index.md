@@ -16,7 +16,7 @@ Complexity is not a feature. Minimalism is a structural decision, and
 when practiced with rigor, it compounds into security and longevity.
 
 We write Rust, Go, and Nix. We deploy on infrastructure we control.
-We publish everything we build.
+We work transparently.
 
 ---
 
