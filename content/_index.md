@@ -8,7 +8,7 @@ template = "homepage.html"
 
 We build software that outlives its authors.
 
-Every system we ship is open-source, self-hosted, and runs without
+Every system we ship is auditable, self-hostable, and runs without
 external dependencies. No vendor lock-in, no opaque abstractions, no
 phone-home telemetry. Our position on design is blunt: if a component
 can be removed without loss of function, it should never have existed.
