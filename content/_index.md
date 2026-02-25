@@ -42,7 +42,9 @@ We design wire protocols, serialization formats, and cryptographic
 message schemas for your specific operational constraints. Security
 properties are formalized before a single line of implementation.
 
-### Active Research
+---
+
+## Active Research
 
 Current R&D informing our practice:
 

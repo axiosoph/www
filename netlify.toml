@@ -10,3 +10,12 @@ for = "/*"
   X-Frame-Options = "DENY"
   Referrer-Policy = "strict-origin-when-cross-origin"
   Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Workaround: sukr sets prefix="./" for 404 pages, which breaks
+# asset paths when served from sub-paths. A 302 redirect ensures
+# the browser resolves relative paths from /404.html correctly.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 302
+  force = false
