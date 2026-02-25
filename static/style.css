@@ -254,7 +254,6 @@ a:hover {
   white-space: nowrap;
   color: var(--fg);
   border-right: 0.55em solid var(--fg-muted);
-  padding-right: 0.1em;
   animation:
     typing-1 1.2s steps(40) 1.5s forwards,
     cursor-blink 0.8s step-end 4 forwards;
@@ -266,7 +265,6 @@ a:hover {
   white-space: nowrap;
   color: var(--fg);
   border-right: 0.55em solid transparent;
-  padding-right: 0.1em;
   animation:
     typing-2 2s steps(54) 3.5s forwards,
     cursor-enter 0.8s step-end 3.2s infinite;
