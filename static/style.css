@@ -87,7 +87,6 @@ main.centered {
 .logo {
   height: 2.8em;
   width: auto;
-  filter: invert(1);
   flex-shrink: 0;
 }
 
@@ -235,6 +234,7 @@ a:hover {
   display: flex;
   align-items: baseline;
   gap: 0.6em;
+  min-width: max-content;
 }
 
 .action .prompt {
